@@ -1,0 +1,32 @@
+/! Contact
+article#contact
+  h2.major Contact
+  form action='#' method='post'
+    .fields
+      .field.half
+        label for='name'  Name
+        input#name name='name' type='text' /
+      .field.half
+        label for='email'  Email
+        input#email name='email' type='text' /
+      .field
+        label for='message'  Message
+        textarea#message name='message' rows='4'
+    ul.actions
+      li
+        input.primary type='submit' value=('Send Message') /
+      li
+        input type='reset' value='Reset' /
+  ul.icons
+    li
+      a.icon.brands.fa-twitter href='#'
+        span.label Twitter
+    li
+      a.icon.brands.fa-facebook-f href='#'
+        span.label Facebook
+    li
+      a.icon.brands.fa-instagram href='#'
+        span.label Instagram
+    li
+      a.icon.brands.fa-github href='#'
+        span.label GitHub
