@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'middleman', '~> 4.2'
+gem 'middleman-deploy', '~> 1.0'
 gem 'middleman-autoprefixer', '~> 2.7'
 gem 'rubocop', '~> 0.79', require: false
 gem 'slim', '~> 4.0'
