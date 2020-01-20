@@ -3,8 +3,9 @@
 source 'https://rubygems.org'
 
 gem 'middleman', '~> 4.2'
-gem 'middleman-deploy', '~> 1.0'
 gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman-gh_pages'
+gem "middleman-imageoptim", '~> 0.3'
 gem 'rubocop', '~> 0.79', require: false
 gem 'slim', '~> 4.0'
 gem 'slim_lint', '~> 0.20', require: false

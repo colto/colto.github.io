@@ -21,13 +21,13 @@ GEM
     dotenv (2.7.5)
     erubis (2.7.0)
     execjs (2.7.0)
+    exifr (1.3.6)
     fast_blank (1.0.0)
     fastimage (2.1.7)
     ffi (1.12.1)
     ffi (1.12.1-x64-mingw32)
     ffi (1.12.1-x86-mingw32)
-    ffi-win32-extensions (1.0.3)
-      ffi
+    fspath (3.1.2)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -36,6 +36,17 @@ GEM
     hashie (3.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    image_optim (0.25.0)
+      exifr (~> 1.2, >= 1.2.2)
+      fspath (~> 3.0)
+      image_size (~> 1.5)
+      in_threads (~> 1.3)
+      progress (~> 3.0, >= 3.0.1)
+    image_optim_pack (0.2.3)
+      fspath (>= 2.1, < 4)
+      image_optim (~> 0.19)
+    image_size (1.5.0)
+    in_threads (1.5.4)
     jaro_winkler (1.5.4)
     kramdown (1.17.0)
     listen (3.0.8)
@@ -76,14 +87,13 @@ GEM
       servolux
       tilt (~> 2.0.9)
       uglifier (~> 3.0)
-    middleman-deploy (1.0.0)
-      middleman-core (>= 3.2)
-      net-sftp
-      ptools
+    middleman-gh_pages (0.9.0)
+    middleman-imageoptim (0.3.0)
+      image_optim (~> 0.25.0)
+      image_optim_pack (~> 0.2.1)
+      middleman-cli
+      middleman-core (>= 3.1)
     minitest (5.14.0)
-    net-sftp (2.1.2)
-      net-ssh (>= 2.6.5)
-    net-ssh (5.2.0)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.13.3.4)
@@ -93,9 +103,7 @@ GEM
     parallel (1.19.1)
     parser (2.7.0.2)
       ast (~> 2.4.0)
-    ptools (1.3.5)
-    ptools (1.3.5-universal-mingw32)
-      win32-file (>= 0.7.0)
+    progress (3.5.2)
     public_suffix (4.0.3)
     rack (2.1.1)
     rainbow (3.0.0)
@@ -135,13 +143,6 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.6.1)
     wdm (0.1.1)
-    win32-file (0.8.2)
-      ffi
-      ffi-win32-extensions
-      win32-file-stat (>= 1.4.0)
-    win32-file-stat (1.5.5)
-      ffi
-      ffi-win32-extensions
 
 PLATFORMS
   ruby
@@ -152,7 +153,8 @@ PLATFORMS
 DEPENDENCIES
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
-  middleman-deploy (~> 1.0)
+  middleman-gh_pages
+  middleman-imageoptim (~> 0.3)
   rubocop (~> 0.79)
   slim (~> 4.0)
   slim_lint (~> 0.20)
