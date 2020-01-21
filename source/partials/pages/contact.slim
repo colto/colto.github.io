@@ -18,15 +18,15 @@ article#contact
       li
         input type='reset' value='Reset' /
   ul.icons
-    li
-      a.icon.brands.fa-twitter href='#'
+    li = link_to data.contact.twitter, target: '_blank'
+      .icon.brands.fa-twitter
         span.label Twitter
-    li
-      a.icon.brands.fa-facebook-f href='#'
-        span.label Facebook
-    li
-      a.icon.brands.fa-instagram href='#'
+    li = link_to data.contact.linkedin, target: '_blank'
+      .icon.brands.fa-linkedin
+        span.label LinkedIn
+    li = link_to data.contact.instagram, target: '_blank'
+      .icon.brands.fa-instagram
         span.label Instagram
-    li
-      a.icon.brands.fa-github href='#'
+    li = link_to data.contact.github, target: '_blank'
+      .icon.brands.fa-github
         span.label GitHub
